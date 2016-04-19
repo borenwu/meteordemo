@@ -24,6 +24,7 @@ export default class SignUp extends Component{
                 console.log(error)
             }
             else{
+                Meteor.logout()
                 console.log('success')
             }
         })
@@ -50,7 +51,11 @@ export default class SignUp extends Component{
     render(){
         return(
             <div>
-
+                <form onSubmit={this.handleCreate.bind(this)}>
+                    <input ref="userNameCreate" placeholder="user name" type="text"/>
+                    <input ref="passwordCreate" placeholder="password" type="password"/>
+                    <button type="submit">Login </button>
+                </form>
 
                 <form onSubmit={this.handleLogin.bind(this)}>
                     <input ref="userName" placeholder="user name" type="text"/>
