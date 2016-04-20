@@ -44,6 +44,7 @@ export default class SignUp extends Component{
             }
             else{
                 console.log(Meteor.user().username)
+                FlowRouter.go('/mainpage')
             }
         })
     }
@@ -54,7 +55,7 @@ export default class SignUp extends Component{
                 <form onSubmit={this.handleCreate.bind(this)}>
                     <input ref="userNameCreate" placeholder="user name" type="text"/>
                     <input ref="passwordCreate" placeholder="password" type="password"/>
-                    <button type="submit">Login </button>
+                    <button type="submit">Create User</button>
                 </form>
 
                 <form onSubmit={this.handleLogin.bind(this)}>
