@@ -5,7 +5,7 @@ export default class Task extends Component{
 
     render(){
         return(
-            <div>
+            <div className="main-content">
                 <h1>This is task page</h1>
             </div>
         )

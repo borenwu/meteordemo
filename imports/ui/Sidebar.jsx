@@ -16,24 +16,21 @@ export default class Sidebar extends Component{
 
 
     render(){
+
         let rows = this.getLinks().map(function(link){
             return(
                 <li key={link._id}>
-                    <a href={link.href}>{link.text}</a>>
+                    <i className="glyphicon glyphicon-search"></i>
+                    <span><a href={link.href}>{link.text}</a></span>
                 </li>
             )
         })
 
         return(
-            <div>
-                <div>
-                    <ul>
-                        {rows}
-                    </ul>
-                </div>
-                <div>
-                    <a href="/signout">Sign out</a>
-                </div>
+            <div className="primary-sidebar">
+                <ul className="nav navbar-collapse collapse navbar-collapse-primary">
+                    {rows}
+                </ul>
             </div>
         )
     }

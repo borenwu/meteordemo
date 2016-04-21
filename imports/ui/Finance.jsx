@@ -5,7 +5,7 @@ export default class Finance extends Component{
 
     render(){
         return(
-            <div>
+            <div className="main-content">
                 <h1>This is Finance page</h1>
             </div>
         )

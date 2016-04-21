@@ -5,7 +5,7 @@ export default class Order extends Component{
 
     render(){
         return(
-            <div>
+            <div className="main-content">
                 <h1>This is order page</h1>
             </div>
         )
