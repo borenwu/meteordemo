@@ -6,11 +6,11 @@ export default class Sidebar extends Component{
 
     getLinks(){
         return [
-            {_id:1,text:'Main',href:'/mainpage'},
-            {_id:2,text:'Order',href:'/order'},
-            {_id:3,text:'Task',href:'/task'},
-            {_id:4,text:'Statistics',href:'/stat'},
-            {_id:5,text:'finance',href:'/finance'},
+            {_id:1,text:'主页',href:'/mainpage'},
+            {_id:2,text:'订单',href:'/order'},
+            {_id:3,text:'任务',href:'/task'},
+            {_id:4,text:'统计',href:'/stat'},
+            {_id:5,text:'财务',href:'/finance'},
         ]
     }
 
@@ -20,15 +20,14 @@ export default class Sidebar extends Component{
         let rows = this.getLinks().map(function(link){
             return(
                 <li key={link._id}>
-                    <i className="glyphicon glyphicon-search"></i>
-                    <span><a href={link.href}>{link.text}</a></span>
+                    <a className="link" href={link.href}><i className="glyphicon glyphicon-search" style={{fontSize:6}}></i> {link.text}</a>
                 </li>
             )
         })
 
         return(
             <div className="primary-sidebar">
-                <ul className="nav navbar-collapse collapse navbar-collapse-primary">
+                <ul className="nav nav-pills nav-stacked">
                     {rows}
                 </ul>
             </div>
